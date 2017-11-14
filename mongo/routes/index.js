@@ -45,7 +45,7 @@ router.post('/report', function(req, res, next) {
 
 
 
-router.post('/deleteReport', function(req, res, next) {
+router.delete('/report', function(req, res, next) {
   console.log("delete")
   Report.remove({}, function(err, removed) {
     if(err) return console.error(err);
