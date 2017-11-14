@@ -32,7 +32,7 @@ $(document).ready(function(){
 
   
   $('#deleteReport').click(function() {
-    var url = "/deleteReport";
+    var url = "deleteReports";
     $.ajax({
       url: url,
       type: "DELETE",
