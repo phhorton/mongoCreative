@@ -31,11 +31,11 @@ $(document).ready(function(){
   });
 
   
-  $('#deleteReport').click(function() {
+  $('#deleteReports').click(function() {
     var url = "deleteReports";
     $.ajax({
       url: url,
-      type: "POST",
+      type: "DELETE",
       contentType: "application/json; charset=utf-8",
       success: function(data, textStatus) {
         $("#done").html("Cleared.");
