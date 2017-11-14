@@ -35,7 +35,7 @@ $(document).ready(function(){
     var url = "deleteReports";
     $.ajax({
       url: url,
-      type: "DELETE",
+      type: "POST",
       contentType: "application/json; charset=utf-8",
       success: function(data, textStatus) {
         $("#done").html("Cleared.");

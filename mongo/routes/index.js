@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/commentDB', {userMongoClient:true});
+mongoose.connect('mongodb://localhost/reportDB', {userMongoClient:true});
 
 var reportSchema = mongoose.Schema({
   Title:String,
@@ -45,7 +45,7 @@ router.post('/report', function(req, res, next) {
 
 
 
-router.delete('/report', function(req, res, next) {
+router.post('/report', function(req, res, next) {
   console.log("delete")
   Report.remove({}, function(err, removed) {
     if(err) return console.error(err);
