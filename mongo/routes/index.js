@@ -49,9 +49,11 @@ router.delete('/report', function(req, res, next) {
   console.log("delete")
   Report.remove({}, function(err, removed) {
     if(err) return console.error(err);
-    console.log(removed);
-  })
-
+    else {
+      console.log("Delete worked");
+      res.sendStatus(200);
+    }
+  });
 });
 
 /*
