@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("#postReport").click(function(){
-      var myobj = {Name:$("#title").val(),Comment:$("#report").val()};
+      var myobj = {Title:$("#title").val(),Report:$("#report").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
 
