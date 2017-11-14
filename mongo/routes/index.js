@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/reportDB', {userMongoClient:true});
+mongoose.connect('mongodb://localhost/commentDB', {userMongoClient:true});
 
 var reportSchema = mongoose.Schema({
   Title:String,
