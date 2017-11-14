@@ -4,7 +4,7 @@ $(document).ready(function(){
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
 
-      var url = "report";
+      var url = "/report";
       $.ajax({
            url:url,
            type: "POST",
@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
   $("#getReport").click(function() {
-    $.getJSON('report', function(data) {
+    $.getJSON('/report', function(data) {
       console.log(data);
       var everything = "<ul>";
       for(var report in data) {
