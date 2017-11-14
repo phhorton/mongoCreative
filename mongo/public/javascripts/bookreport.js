@@ -22,7 +22,7 @@ $(document).ready(function(){
       console.log(data);
       var everything = "<ul>";
       for(var report in data) {
-        rpt = data[comment];
+        rpt = data[report];
         everything += "<li> Title: " + rpt.Title + " -- Report: " + rpt.Report + "</li>";
       }
       everything += "</ul>";
