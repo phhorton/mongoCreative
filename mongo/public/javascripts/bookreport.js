@@ -2,7 +2,8 @@ $(document).ready(function(){
   $("#postReport").click(function(){
       var myobj = {Title:$("#title").val(),Report:$("#report").val()};
       jobj = JSON.stringify(myobj);
-      $("#json").text(jobj);
+      var titleName = $("#title").val();
+      $("#json").text("Successfully inserted " + titleName + "!");
 
       var url = "/report";
       $.ajax({
@@ -11,7 +12,7 @@ $(document).ready(function(){
            data: jobj,
            contentType: "application/json; charset=utf-8",
            success: function(data,textStatus) {
-                 $("#done").html(textStatus);
+                 console.log(textStatus);
            }
       })
   });
@@ -38,7 +39,8 @@ $(document).ready(function(){
       type: "DELETE",
       contentType: "application/json; charset=utf-8",
       success: function(data, textStatus) {
-        $("#done").html("Cleared.");
+        console.log("Cleared");
+        $("#reports").html("<ul></ul>");
       }
     })
   });
