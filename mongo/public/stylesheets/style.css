@@ -2,6 +2,7 @@ body {
   padding: 50px;
   text-align: center; 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: WHITE;
   background-size: cover;
   background-image: url("http://img13.deviantart.net/520e/i/2012/324/b/c/weathered_paper_17_by_dantesangreal-d5lmrig.jpg");
 }
