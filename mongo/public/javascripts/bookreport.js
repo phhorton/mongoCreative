@@ -4,7 +4,7 @@ $(document).ready(function(){
       jobj = JSON.stringify(myobj);
       var titleName = $("#title").val();
       $("#json").text("Successfully inserted " + titleName + "!");
-
+      $("#reports").html("<ul></ul>");
       var url = "/report";
       $.ajax({
            url:url,
@@ -21,6 +21,7 @@ $(document).ready(function(){
   $("#getReport").click(function() {
     $.getJSON('/report', function(data) {
       console.log(data);
+      $("#json").text("");
       var everything = "<ul>";
       for(var report in data) {
         rpt = data[report];
@@ -34,6 +35,7 @@ $(document).ready(function(){
   
   $('#deleteReports').click(function() {
     var url = "/report";
+    $("#json").text("");
     $.ajax({
       url: url,
       type: "DELETE",
