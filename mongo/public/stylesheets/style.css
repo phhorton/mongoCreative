@@ -11,6 +11,10 @@ a {
   color: #00B7FF;
 }
 
+h1 {
+  color: white;
+}
+
 #title {
   border: 5px outset;
   border-radius: 15px;
